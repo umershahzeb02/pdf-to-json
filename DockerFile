@@ -1,0 +1,23 @@
+# Base image for building React frontend
+FROM node:14 AS build
+
+# Set working directory to /app and copy the package files
+WORKDIR /app
+COPY package*.json ./
+
+# Install dependencies and build the frontend
+RUN npm install && npm run build
+# Base image for FastAPI backend
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8
+
+# Copy backend and install Python dependencies
+WORKDIR /app/backend
+COPY ./backend/ /app/backend/
+RUN pip install -r requirements.txt
+
+# Copy the frontend build to the backend static folder
+COPY --from=build /app/build /app/backend/static
+
+# Expose the port and run the backend
+EXPOSE 8000
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
