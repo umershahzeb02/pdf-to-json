@@ -10,8 +10,8 @@
     "routes": [
         {
             "src": "/api/convert-pdf",
+            "methods": ["POST"],
             "dest": "backend/main.py"
         }
-        
     ]
 }
