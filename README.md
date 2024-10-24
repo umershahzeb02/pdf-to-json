@@ -1,70 +1,104 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# 📄 PDF to JSON Converter Web App
 
-In the project directory, you can run:
+Welcome to the **PDF to JSON Converter**! This app allows you to easily convert PDF documents into a structured JSON format for better manipulation and use in web applications. 🚀
+Frontend is live here: pdf2json.vercel.app
+## 🌟 Features
 
-### `npm start`
+- **PDF to JSON Conversion**: Extract text, forms, metadata, and more from your PDF files.
+- **Element Categorization**: Automatically identifies elements like headers, dates, form fields, amounts, and other key data.
+- **OCR Support**: Converts scanned PDF images to text where applicable.
+- **Metadata Extraction**: Includes processing details like total pages, element types, and the processing date.
+- **Simple Interface**: User-friendly interface for uploading PDFs and downloading JSON output.
+- **Responsive Design**: Optimized for all devices, from desktop to mobile.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project uses the following technologies:
 
-### `npm test`
+- **Frontend**: ⚛️ React.js
+- **Backend**: 🐍 FastAPI
+- **PDF Parsing**: 📄 PyPDF2, PDFMiner
+- **OCR**: 🖼️ Tesseract OCR (for scanned PDFs)
+- **Styling**: 💅 Tailwind CSS
+- **Deployment**: ☁️ Docker (frontend is deployed on vercel, but it does not support backend.) Why?? 💵Money🦀
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Getting Started
 
-### `npm run build`
+Follow these instructions to get the project up and running locally.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Node.js** (v14+)
+- **Python** (v3.7+)
+- **Docker** (optional, for containerized setup)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/pdf-to-json-converter.git
+   cd pdf-to-json-converter
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install frontend dependencies**:
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Install backend dependencies**:
+   ```bash
+   cd ../backend
+   pip install -r requirements.txt
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Run the app**:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   - **Frontend**:
+     ```bash
+     npm start
+     ```
+   - **Backend**:
+     ```bash
+     cd backend
+     uvicorn main:app --reload
+     ```
 
-## Learn More
+5. **Visit the app** in your browser at `http://localhost:3000`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🖥️ Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Upload a PDF** via the web interface.
+2. **Convert** the uploaded file to JSON format.
+3. **Download** the JSON file and use it as needed.
 
-### Code Splitting
+## 🛠️ Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Frontend
 
-### Analyzing the Bundle Size
+The frontend is built with **React.js** and **Tailwind CSS** for a smooth and responsive user interface. You'll find all the relevant code inside the `src/` folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Backend
 
-### Making a Progressive Web App
+The backend is powered by **FastAPI** and handles the PDF processing and JSON conversion. It uses libraries like **PyPDF2** and **PDFMiner** for parsing, and **Tesseract OCR** to handle scanned PDFs. Check the `backend/` folder for the API code.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🤖 Future Improvements
 
-### Advanced Configuration
+- ✨ Add support for extracting images from PDFs.
+- 🔍 Implement keyword-based search within the PDF content.
+- 📈 Include a dashboard for visualizing metadata and content summaries.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🤝 Contributing
 
-### Deployment
+Contributions are always welcome! Feel free to fork this repository and submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📧 Contact
 
-### `npm run build` fails to minify
+If you have any questions or feedback, reach out to me at: [umershahzeb@gmail.com](mailto:umershahzeb@gmail.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+### ⭐ Don't forget to give this repo a star if you found it useful!
+
+---
