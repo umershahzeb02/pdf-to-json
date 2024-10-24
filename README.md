@@ -77,7 +77,7 @@ Follow these instructions to get the project up and running locally.
 
 ### Frontend
 
-The frontend is built with **React.js** and **Tailwind CSS** for a smooth and responsive user interface. You'll find all the relevant code inside the `frontend/` folder.
+The frontend is built with **React.js** and **Tailwind CSS** for a smooth and responsive user interface. You'll find all the relevant code inside the `src/` folder.
 
 ### Backend
 
@@ -95,7 +95,7 @@ Contributions are always welcome! Feel free to fork this repository and submit a
 
 ## 📧 Contact
 
-If you have any questions or feedback, reach out to me at: [your-email@example.com](mailto:umershahzeb@gmail.com)
+If you have any questions or feedback, reach out to me at: [umershahzeb@gmail.com](mailto:umershahzeb@gmail.com)
 
 ---
 
