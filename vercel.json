@@ -9,8 +9,9 @@
     ],
     "routes": [
         {
-            "src": "/api/(.*)",
+            "src": "/api/convert-pdf",
             "dest": "backend/main.py"
         }
+        
     ]
 }
