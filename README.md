@@ -22,7 +22,7 @@ This project uses the following technologies:
 - **PDF Parsing**: 📄 PyPDF2, PDFMiner
 - **OCR**: 🖼️ Tesseract OCR (for scanned PDFs)
 - **Styling**: 💅 Tailwind CSS
-- **Deployment**: ☁️ Docker & Heroku (or your chosen cloud provider)
+- **Deployment**: ☁️ Docker (frontend is deployed on vercel, but it does not support backend.) Why?? 💵Money🦀
 
 ## 🚀 Getting Started
 
