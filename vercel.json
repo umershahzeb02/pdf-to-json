@@ -1,17 +1,20 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "backend/main.py",
-            "use": "@vercel/python",
-            "config": { "runtime": "python3.9" }
-        }
-    ],
-    "routes": [
-        {
-            "src": "/api/convert-pdf",
-            "methods": ["POST"],
-            "dest": "backend/main.py"
-        }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/main.py",
+      "use": "@vercel/python",
+      "config": { "runtime": "python3.9" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/main.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "public/index.html"
+    }
+  ]
 }
